@@ -4,7 +4,7 @@ const ethers = require("ethers");
 const { abi } = require("./abi");
 
 // Setup contract
-const lootAddress = "0xFF9C1b15B16263C61d017ee9F65C50e4AE0113D7";
+const lootAddress = "0x8bf2f876e2dcd2cae9c3d272f325776c82da366d";
 const rpc = new ethers.providers.JsonRpcProvider("http://localhost:8545");
 const loot = new ethers.Contract(lootAddress, abi, rpc);
 
@@ -13,7 +13,7 @@ const loot = new ethers.Contract(lootAddress, abi, rpc);
   let retrievedLoot = [];
 
   // Collect 1...8000 ids
-  for (let i = 1; i <= 8000; i++) {
+  for (let i = 8001; i <= 16000; i++) {
     console.log("Collecting: ", i);
 
     // Collect parts
